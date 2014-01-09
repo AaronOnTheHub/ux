@@ -1,0 +1,71 @@
+.spin-status {
+    background-image: url('../Images/spin-back.png');
+    z-index: 32768;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    color: rgba(150, 164, 162, .5);
+}
+.spin-layer-1 {
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 120px;
+    height: 120px;
+    margin:-60px 0 0 -60px;
+    -webkit-animation: bottomlayerspin 4s linear infinite;
+    -moz-animation: bottomlayerspin 4s linear infinite;
+    animation: bottomlayerspin 4s linear infinite;
+    -webkit-animation-direction: alternate;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+}
+
+.spin-layer-2 {
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 120px;
+    height: 120px;
+    margin:-60px 0 0 -60px;
+    -webkit-animation: middlelayerspin 2s linear infinite;
+    -moz-animation: middlelayerspin 2s linear infinite;
+    animation: middlelayerspin 2s linear infinite;
+    animation-direction: alternate;
+    -webkit-animation-direction: alternate;
+}
+
+.spin-layer-3 {
+    z-index: 3;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 120px;
+    height: 120px;
+    margin:-60px 0 0 -60px;
+    animation: hcharacterglowfirst 1s;
+    -webkit-animation: hcharacterglowfirst 4s;
+    animation-direction: alternate;
+    -webkit-animation-direction: alternate;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+
+}
+
+
+@-moz-keyframes bottomlayerspin { 100% { -moz-transform: rotate(360deg) scale(1.2); } }
+@-webkit-keyframes bottomlayerspin { 100% { -webkit-transform: rotate(360deg) scale(1.2); } }
+@keyframes bottomlayerspin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg) scale(1.2); } }
+
+@-moz-keyframes middlelayerspin { 100% { -moz-transform: rotate(-360deg) scale(1.2); } }
+@-webkit-keyframes middlelayerspin { 100% { -webkit-transform: rotate(-360deg) scale(1.2); } }
+@keyframes middlelayerspin { 100% { -webkit-transform: rotate(-360deg); transform:rotate(-360deg); } }
+
+@-webkit-keyframes hcharacterglowfirst { from {opacity:1;} to {opacity:.8} }
+@keyframes hcharacterglowfirst { from {opacity:1;} to {opacity:.8} }
